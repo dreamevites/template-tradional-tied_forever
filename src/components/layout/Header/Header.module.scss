@@ -1,0 +1,132 @@
+@import "../../../styles/scss/variables";
+
+/* Header Styles */
+.header {
+  // position: fixed;
+  // display: none;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: var(--color-p1);
+  padding: 15px 0;
+
+  &.scrolled {
+    background: rgba(255, 255, 255, 0.277);
+    box-shadow: 0 5px 20px rgba(139, 21, 56, 0.1);
+    padding: 10px 0;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  height: 40px;
+
+  /* Mobile Menu Button */
+  .mobileMenuBtn {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 1001;
+
+    span {
+      width: 25px;
+      height: 3px;
+      background: var(--color-p1);
+      margin: 3px 0;
+      transition: $transition-smooth;
+      border-radius: 2px;
+    }
+
+    &.open {
+      span:nth-child(1) {
+        transform: rotate(45deg) translate(6px, 6px);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+      }
+    }
+  }
+}
+
+/* Mobile Navigation */
+.mobileNav {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: rgba(255, 248, 240, 0.98);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: $transition-smooth;
+
+  &.open {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobileNavList {
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .mobileNavItem {
+      margin: 0;
+
+      .mobileNavLink {
+        background: none;
+        border: none;
+        font-size: 1.1rem;
+        font-weight: 500;
+        color: var(--color-text-dark);
+        cursor: pointer;
+        padding: 12px 16px;
+        border-radius: 8px;
+        transition: $transition-smooth;
+        width: 100%;
+        text-align: left;
+
+        &:hover {
+          color: var(--color-p1);
+          background: rgba(139, 21, 56, 0.1);
+        }
+      }
+    }
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav {
+    .mobileMenuBtn {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    padding: 0 15px;
+  }
+}

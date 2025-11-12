@@ -1,0 +1,20 @@
+.countDonw {
+  position: relative;
+
+  .inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -35%);
+
+    p {
+      color: var(--color-p1);
+      margin: -10px;
+    }
+
+    b {
+      color: var(--color-p1);
+      font-size: 30px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+// Gradients
+$gradient-warm: linear-gradient(135deg, var(--color-p1), var(--color-s1));
+$gradient-gold: linear-gradient(135deg, var(--color-p2), #f4e4bc);
+$gradient-soft: linear-gradient(135deg, var(--color-s2), #f8f4e6);
+
+// Spacing
+$section-padding: 80px 0;
+$container-padding: 0 20px;
+$border-radius: 12px;
+$box-shadow: 0 10px 30px rgba(139, 21, 56, 0.1);
+$box-shadow-hover: 0 20px 40px rgba(139, 21, 56, 0.2);
+
+// Transitions
+$transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

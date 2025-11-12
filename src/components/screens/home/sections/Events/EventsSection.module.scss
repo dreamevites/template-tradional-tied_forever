@@ -1,0 +1,61 @@
+.Event {
+  border: 2px solid var(--color-p2);
+  border-radius: 4px;
+  margin-bottom: 24px;
+  padding: 24px 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--color-p5);
+  //   background-color: white;
+  cursor: pointer;
+
+  p {
+    width: 30%;
+
+    &.eName {
+      color: var(--color-p1);
+      font-size: 17px;
+    }
+  }
+
+  b {
+    color: rgb(62, 62, 62) !important;
+    // color: var(--color-text-dark);
+  }
+
+  &:hover {
+    // background-color: var(--color-p4);
+
+    box-shadow: 7px 7px 7px var(--color-p2);
+    transform: scale(1.015);
+  }
+
+  @include respond-below(md) {
+    flex-direction: column;
+    gap: 20px;
+    p {
+      width: fit-content;
+
+      &.eName {
+        font-size: 25px;
+
+        span {
+          display: block;
+          text-align: center;
+        }
+      }
+
+      &.loc {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.EventsSection {
+  background-color: white;
+  //   background-color: var(--color-p5);
+
+  padding-bottom: 50px;
+}

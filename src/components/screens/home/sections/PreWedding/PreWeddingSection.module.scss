@@ -1,0 +1,89 @@
+.PreWeddingSection {
+  height: 110vh;
+  position: relative;
+  padding: 30px 0px 60px 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 50%;
+    width: 100%;
+    background-color: var(--color-p2);
+    bottom: 0;
+    left: 0;
+  }
+
+  h2 {
+    text-align: center;
+    color: var(--color-p1);
+    padding-bottom: 14px;
+    font-size: 30px;
+  }
+
+  .img {
+    height: 90%;
+    width: 100%;
+    border-radius: 4px;
+    background-position: top center;
+    @include flexCenter;
+    flex-direction: column;
+    color: white;
+
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+      bottom: 0;
+      left: 0;
+    }
+
+    .box {
+      //   background-color: red;
+      position: relative;
+      z-index: 10;
+      width: 300px;
+      @include flexCenter;
+      flex-direction: column;
+      .playBtn {
+        height: 50px;
+        width: 50px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border: 2px solid white;
+        border-radius: 50%;
+        @include flexCenter;
+        svg {
+          font-size: 20px;
+        }
+      }
+
+      h3 {
+        font-size: 30px;
+      }
+    }
+
+    &:hover {
+      &::after {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+
+      .box {
+        .playBtn {
+          background-color: rgba(0, 0, 0, 0.6);
+          transform: scale(1.1);
+
+          &:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+            svg {
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
