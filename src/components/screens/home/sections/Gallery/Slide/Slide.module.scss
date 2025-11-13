@@ -1,0 +1,16 @@
+.SlideShow {
+  width: 100%;
+  padding: 50px 0;
+  overflow: visible;
+
+  .img {
+    padding: 0 10px;
+    cursor: pointer;
+
+    &:hover {
+      img {
+        transform: scale(1.01);
+      }
+    }
+  }
+}

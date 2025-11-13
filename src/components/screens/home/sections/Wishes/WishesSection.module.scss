@@ -1,0 +1,28 @@
+.QuoteSection {
+  padding: 100px 0;
+  @include flexCenter;
+
+  .cont {
+    text-align: center;
+  }
+}
+
+.Wish {
+  padding: 70px 20px;
+  text-align: center;
+  max-width: 720px;
+  margin: auto;
+
+  p {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: var(--color-p1);
+    // line-height: 28px;
+  }
+
+  small {
+    font-size: 17px;
+    text-align: center;
+    color: var(--text-color-dark);
+  }
+}
